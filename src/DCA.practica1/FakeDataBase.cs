@@ -39,5 +39,10 @@ namespace DCA.practica1
             new Videojuegos(70, 6, "The Last Of Us 2", Marca.Sony, false),
             new Videojuegos(60, 6, "Mario Odissey", Marca.Ninendo, false)
         };
+
+        public static List<Usuario> Usuarios { get; set; } = new List<Usuario>
+        {
+            new Usuario("usuario", "1234")
+        };
     }
 }
