@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="FakeDataBase.cs" />
     <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="VentanaCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaCarrito.Designer.cs">
+      <DependentUpon>VentanaCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaListadoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="Programa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VentanaCarrito.resx">
+      <DependentUpon>VentanaCarrito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaInicioSesion.resx">
       <DependentUpon>VentanaInicioSesion.cs</DependentUpon>
     </EmbeddedResource>

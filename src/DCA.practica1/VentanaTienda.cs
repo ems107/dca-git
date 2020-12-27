@@ -51,5 +51,25 @@ namespace DCA.practica1
             Sesion = null;
             VentanaInicioSesion.Instancia.Show();
         }
+
+        private void botonCarrito_Click(object sender, EventArgs e)
+        {
+            if (Sesion.Carrito.Count > 0)
+            {
+                VentanaCarrito ventana = new VentanaCarrito();
+                ventana.Show();
+                this.Hide();
+            }
+        }
+
+        public static void RecargarVentanaTienda()
+        {
+            VentanaTienda.Instancia.VentanaTienda_Load(null, null);
+        }
+
+        private void VentanaTienda_Load(object sender, EventArgs e)
+        {
+            botonCarrito.Text = Sesion.Carrito.Count == 0 ? "Carrito" : "Carrito: " + Sesion.Carrito.Count;
+        }
     }
 }

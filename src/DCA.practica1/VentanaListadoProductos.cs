@@ -26,6 +26,7 @@ namespace DCA.practica1
 
         private void CargarProductos(IList<Producto> productos)
         {
+            vistaListaProductos.Controls.Clear();
             int altura = 7;
 
             foreach(Producto producto in productos)
@@ -52,6 +53,7 @@ namespace DCA.practica1
         {
             Instancia = null;
             VentanaTienda.Instancia.Show();
+            VentanaTienda.RecargarVentanaTienda();
         }
     }
 }
