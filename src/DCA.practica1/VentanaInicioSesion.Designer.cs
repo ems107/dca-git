@@ -33,6 +33,7 @@
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelContraseña = new System.Windows.Forms.Label();
             this.entradaContraseña = new System.Windows.Forms.TextBox();
+            this.botonRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonInicioSesion
@@ -77,11 +78,22 @@
             this.entradaContraseña.Size = new System.Drawing.Size(439, 20);
             this.entradaContraseña.TabIndex = 4;
             // 
+            // botonRegistrar
+            // 
+            this.botonRegistrar.Location = new System.Drawing.Point(521, 277);
+            this.botonRegistrar.Name = "botonRegistrar";
+            this.botonRegistrar.Size = new System.Drawing.Size(90, 23);
+            this.botonRegistrar.TabIndex = 5;
+            this.botonRegistrar.Text = "Registrar";
+            this.botonRegistrar.UseVisualStyleBackColor = true;
+            this.botonRegistrar.Click += new System.EventHandler(this.botonRegistrar_Click);
+            // 
             // VentanaInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonRegistrar);
             this.Controls.Add(this.entradaContraseña);
             this.Controls.Add(this.labelContraseña);
             this.Controls.Add(this.labelUsuario);
@@ -101,5 +113,6 @@
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.TextBox entradaContraseña;
+        private System.Windows.Forms.Button botonRegistrar;
     }
 }

@@ -31,5 +31,11 @@ namespace DCA.practica1
                 this.Hide();
             }
         }
+
+        private void botonRegistrar_Click(object sender, EventArgs e)
+        {
+            VentanaRegistrar ventana = new VentanaRegistrar();
+            ventana.Show();
+        }
     }
 }
