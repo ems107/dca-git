@@ -26,8 +26,8 @@ namespace DCA.practica1
         public static List<Portatiles> Portatiles { get; set; } = new List<Portatiles>
         {
             new Portatiles(1350, 6, "Surface Book 2", Marca.Microsoft, Procesador.Intel_i7),
-            new Portatiles(150, 6, "Mi 9T", Marca.Google, Procesador.Desconocido),
-            new Portatiles(150, 6, "Mi 9T", Marca.Apple, Procesador.Desconocido),
+            new Portatiles(150, 6, "Chromebook", Marca.Google, Procesador.Desconocido),
+            new Portatiles(150, 6, "Mac Pro", Marca.Apple, Procesador.Desconocido)
         };
 
         public static List<Videojuegos> Videojuegos { get; set; } = new List<Videojuegos>
