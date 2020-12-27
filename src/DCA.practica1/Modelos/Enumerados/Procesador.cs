@@ -8,6 +8,7 @@ namespace DCA.practica1.Modelos.Enumerados
 {
     public enum Procesador
     {
+        Desconocido,
         Intel_i3,
         Intel_i5,
         Intel_i7,
