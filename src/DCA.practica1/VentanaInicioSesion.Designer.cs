@@ -77,6 +77,7 @@
             this.entradaContraseña.Name = "entradaContraseña";
             this.entradaContraseña.Size = new System.Drawing.Size(439, 20);
             this.entradaContraseña.TabIndex = 4;
+            this.entradaContraseña.UseSystemPasswordChar = true;
             // 
             // botonRegistrar
             // 
