@@ -40,14 +40,15 @@
             this.vistaListaProductos.TabIndex = 0;
             this.vistaListaProductos.UseCompatibleStateImageBehavior = false;
             // 
-            // ListadoProductos
+            // VentanaListadoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.vistaListaProductos);
-            this.Name = "ListadoProductos";
+            this.Name = "VentanaListadoProductos";
             this.Text = "ListadoProductos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaListadoProductos_FormClosing);
             this.ResumeLayout(false);
 
         }
