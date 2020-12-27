@@ -25,7 +25,8 @@ namespace DCA.practica1
         private void CargarProductos()
         {
             vistaListaProductos.Controls.Clear();
-            int altura = 7;
+            Int32 altura = 7;
+            Single precio = 0;
 
             foreach (Producto producto in VentanaTienda.Sesion.Carrito)
             {
@@ -52,7 +53,10 @@ namespace DCA.practica1
                 vistaListaProductos.Controls.Add(detallesProducto);
                 vistaListaProductos.Controls.Add(eliminarProducto);
                 altura += 30;
+                precio += producto.Precio;
             }
+
+            labelPrecioTotal.Text = precio.ToString() + "€";
         }
 
         private void VentanaCarrito_FormClosing(object sender, FormClosingEventArgs e)
