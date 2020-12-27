@@ -26,7 +26,7 @@ namespace DCA.practica1
             Usuario intentoInicioSesion = new Usuario(entradaUsuario.Text, entradaContraseña.Text);
             if (FakeDataBase.Usuarios.Contains(intentoInicioSesion))
             {
-                VentanaTienda ventana = new VentanaTienda();
+                VentanaTienda ventana = new VentanaTienda(FakeDataBase.Usuarios[FakeDataBase.Usuarios.IndexOf(intentoInicioSesion)]);
                 ventana.Show();
                 this.Hide();
             }

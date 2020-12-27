@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DCA.practica1.Modelos.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace DCA.practica1.Modelos
 {
     public class Usuario
     {
+        public List<Producto> Carrito { get; set; } = new List<Producto>();
         public String Nombre { get; set; }
         public String Contraseña { get; set; }
         public Usuario(String nombre, String contraseña)

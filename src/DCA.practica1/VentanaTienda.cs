@@ -15,10 +15,12 @@ namespace DCA.practica1
     public partial class VentanaTienda : Form
     {
         public static VentanaTienda Instancia;
+        public static Usuario Sesion;
 
-        public VentanaTienda()
+        public VentanaTienda(Usuario sesion)
         {
             Instancia = this;
+            Sesion = sesion;
             InitializeComponent();
         }
 
@@ -46,6 +48,7 @@ namespace DCA.practica1
         private void VentanaTienda_FormClosing(object sender, FormClosingEventArgs e)
         {
             Instancia = null;
+            Sesion = null;
             VentanaInicioSesion.Instancia.Show();
         }
     }
