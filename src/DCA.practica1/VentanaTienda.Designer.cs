@@ -31,6 +31,7 @@
             this.botonVideojuegos = new System.Windows.Forms.Button();
             this.botonPortatiles = new System.Windows.Forms.Button();
             this.botonDispositivosMoviles = new System.Windows.Forms.Button();
+            this.botonCarrito = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonVideojuegos
@@ -64,16 +65,29 @@
             this.botonDispositivosMoviles.UseVisualStyleBackColor = true;
             this.botonDispositivosMoviles.Click += new System.EventHandler(this.botonDispositivosMoviles_Click);
             // 
+            // botonCarrito
+            // 
+            this.botonCarrito.Location = new System.Drawing.Point(12, 395);
+            this.botonCarrito.Name = "botonCarrito";
+            this.botonCarrito.Size = new System.Drawing.Size(144, 43);
+            this.botonCarrito.TabIndex = 3;
+            this.botonCarrito.Text = "Carrito";
+            this.botonCarrito.UseVisualStyleBackColor = true;
+            this.botonCarrito.Click += new System.EventHandler(this.botonCarrito_Click);
+            // 
             // VentanaTienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonCarrito);
             this.Controls.Add(this.botonDispositivosMoviles);
             this.Controls.Add(this.botonPortatiles);
             this.Controls.Add(this.botonVideojuegos);
             this.Name = "VentanaTienda";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaTienda_FormClosing);
+            this.Load += new System.EventHandler(this.VentanaTienda_Load);
             this.ResumeLayout(false);
 
         }
@@ -83,6 +97,7 @@
         private System.Windows.Forms.Button botonVideojuegos;
         private System.Windows.Forms.Button botonPortatiles;
         private System.Windows.Forms.Button botonDispositivosMoviles;
+        private System.Windows.Forms.Button botonCarrito;
     }
 }
 

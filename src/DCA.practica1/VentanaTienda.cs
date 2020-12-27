@@ -15,10 +15,12 @@ namespace DCA.practica1
     public partial class VentanaTienda : Form
     {
         public static VentanaTienda Instancia;
+        public static Usuario Sesion;
 
-        public VentanaTienda()
+        public VentanaTienda(Usuario sesion)
         {
             Instancia = this;
+            Sesion = sesion;
             InitializeComponent();
         }
 
@@ -41,6 +43,33 @@ namespace DCA.practica1
             VentanaListadoProductos ventana = new VentanaListadoProductos(FakeDataBase.DispositivosMoviles.ToArray());
             ventana.Show();
             this.Hide();
+        }
+
+        private void VentanaTienda_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Instancia = null;
+            Sesion = null;
+            VentanaInicioSesion.Instancia.Show();
+        }
+
+        private void botonCarrito_Click(object sender, EventArgs e)
+        {
+            if (Sesion.Carrito.Count > 0)
+            {
+                VentanaCarrito ventana = new VentanaCarrito();
+                ventana.Show();
+                this.Hide();
+            }
+        }
+
+        public static void RecargarVentanaTienda()
+        {
+            VentanaTienda.Instancia.VentanaTienda_Load(null, null);
+        }
+
+        private void VentanaTienda_Load(object sender, EventArgs e)
+        {
+            botonCarrito.Text = Sesion.Carrito.Count == 0 ? "Carrito" : "Carrito: " + Sesion.Carrito.Count;
         }
     }
 }

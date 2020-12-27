@@ -1,4 +1,5 @@
-﻿using DCA.practica1.Modelos.Interfaces;
+﻿using DCA.practica1.Modelos;
+using DCA.practica1.Modelos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,13 +21,31 @@ namespace DCA.practica1
             Instancia = this;
             InitializeComponent();
             CargarProductos(productos);
+            labelCarrito.Text = "Carrito: " + VentanaTienda.Sesion.Carrito.Count.ToString();
         }
 
         private void CargarProductos(IList<Producto> productos)
         {
+            vistaListaProductos.Controls.Clear();
+            int altura = 7;
+
             foreach(Producto producto in productos)
             {
-                vistaListaProductos.Items.Add(producto.ToString());
+                Button añadirProducto = new Button()
+                {
+                    Text = producto.ToString(),
+                    Width = 200,
+                    Location = new Point(0, altura)
+            };
+
+                añadirProducto.Click += (okSender, okEvents) =>
+                { 
+                    VentanaTienda.Sesion.Carrito.Add(producto);
+                    labelCarrito.Text = "Carrito: " + VentanaTienda.Sesion.Carrito.Count.ToString();
+                };
+
+                vistaListaProductos.Controls.Add(añadirProducto);
+                altura += añadirProducto.Height;
             }
         }
 
@@ -34,6 +53,7 @@ namespace DCA.practica1
         {
             Instancia = null;
             VentanaTienda.Instancia.Show();
+            VentanaTienda.RecargarVentanaTienda();
         }
     }
 }

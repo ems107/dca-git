@@ -8,5 +8,6 @@ namespace DCA.practica1.Modelos.Interfaces
 {
     public interface Producto
     {
+        Single Precio { get; set; }
     }
 }

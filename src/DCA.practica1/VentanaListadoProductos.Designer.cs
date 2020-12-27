@@ -28,17 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vistaListaProductos = new System.Windows.Forms.ListView();
+            this.labelCarrito = new System.Windows.Forms.Label();
+            this.vistaListaProductos = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // labelCarrito
+            // 
+            this.labelCarrito.AutoSize = true;
+            this.labelCarrito.Location = new System.Drawing.Point(13, 425);
+            this.labelCarrito.Name = "labelCarrito";
+            this.labelCarrito.Size = new System.Drawing.Size(40, 13);
+            this.labelCarrito.TabIndex = 2;
+            this.labelCarrito.Text = "Carrito:";
             // 
             // vistaListaProductos
             // 
-            this.vistaListaProductos.HideSelection = false;
-            this.vistaListaProductos.Location = new System.Drawing.Point(1, 0);
+            this.vistaListaProductos.Location = new System.Drawing.Point(2, 1);
             this.vistaListaProductos.Name = "vistaListaProductos";
-            this.vistaListaProductos.Size = new System.Drawing.Size(799, 449);
-            this.vistaListaProductos.TabIndex = 0;
-            this.vistaListaProductos.UseCompatibleStateImageBehavior = false;
+            this.vistaListaProductos.Size = new System.Drawing.Size(797, 421);
+            this.vistaListaProductos.TabIndex = 3;
             // 
             // VentanaListadoProductos
             // 
@@ -46,15 +54,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.vistaListaProductos);
+            this.Controls.Add(this.labelCarrito);
             this.Name = "VentanaListadoProductos";
             this.Text = "ListadoProductos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaListadoProductos_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView vistaListaProductos;
+        private System.Windows.Forms.Label labelCarrito;
+        private System.Windows.Forms.Panel vistaListaProductos;
     }
 }

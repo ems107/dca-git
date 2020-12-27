@@ -16,7 +16,7 @@ namespace DCA.practica1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentanaTienda());
+            Application.Run(new VentanaInicioSesion());
         }
     }
 }

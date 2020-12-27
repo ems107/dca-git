@@ -47,6 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FakeDataBase.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="VentanaCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaCarrito.Designer.cs">
+      <DependentUpon>VentanaCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaListadoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +67,18 @@
     <Compile Include="Modelos\Portatiles.cs" />
     <Compile Include="Modelos\Televisores.cs" />
     <Compile Include="Modelos\Videojuegos.cs" />
+    <Compile Include="VentanaInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaInicioSesion.Designer.cs">
+      <DependentUpon>VentanaInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaRegistrar.Designer.cs">
+      <DependentUpon>VentanaRegistrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaTienda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +87,12 @@
     </Compile>
     <Compile Include="Programa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VentanaCarrito.resx">
+      <DependentUpon>VentanaCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaInicioSesion.resx">
+      <DependentUpon>VentanaInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaListadoProductos.resx">
       <DependentUpon>VentanaListadoProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +105,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaRegistrar.resx">
+      <DependentUpon>VentanaRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaTienda.resx">
       <DependentUpon>VentanaTienda.cs</DependentUpon>
     </EmbeddedResource>
