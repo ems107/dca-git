@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelos\DispositivoMovil.cs" />
+    <Compile Include="Modelos\Enumerados\Procesador.cs" />
+    <Compile Include="Modelos\Enumerados\Marca.cs" />
+    <Compile Include="Modelos\Portatiles.cs" />
+    <Compile Include="Modelos\Televisores.cs" />
+    <Compile Include="Modelos\Videojuegos.cs" />
     <Compile Include="VentanaTienda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,5 +82,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
