@@ -29,5 +29,11 @@ namespace DCA.practica1
                 vistaListaProductos.Items.Add(producto.ToString());
             }
         }
+
+        private void VentanaListadoProductos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Instancia = null;
+            VentanaTienda.Instancia.Show();
+        }
     }
 }
