@@ -74,6 +74,7 @@
             this.Controls.Add(this.botonVideojuegos);
             this.Name = "VentanaTienda";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaTienda_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -42,5 +42,11 @@ namespace DCA.practica1
             ventana.Show();
             this.Hide();
         }
+
+        private void VentanaTienda_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Instancia = null;
+            VentanaInicioSesion.Instancia.Show();
+        }
     }
 }
