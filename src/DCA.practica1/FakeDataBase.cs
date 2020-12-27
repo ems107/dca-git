@@ -10,7 +10,7 @@ namespace DCA.practica1
 {
     public static class FakeDataBase
     {
-        internal static List<DispositivoMovil> DispositivosMoviles { get; set; } = new List<DispositivoMovil>
+        public static List<DispositivoMovil> DispositivosMoviles { get; set; } = new List<DispositivoMovil>
         {
             new DispositivoMovil(250, 6, "Mi 9T", Marca.Xiaomi),
             new DispositivoMovil(350, 6, "Mi 10", Marca.Xiaomi),
@@ -23,14 +23,14 @@ namespace DCA.practica1
             new DispositivoMovil(400, 6, "X1", Marca.Sony)
         };
 
-        internal static List<Portatiles> Portatiles { get; set; } = new List<Portatiles>
+        public static List<Portatiles> Portatiles { get; set; } = new List<Portatiles>
         {
             new Portatiles(1350, 6, "Surface Book 2", Marca.Microsoft, Procesador.Intel_i7),
             new Portatiles(150, 6, "Mi 9T", Marca.Google, Procesador.Desconocido),
             new Portatiles(150, 6, "Mi 9T", Marca.Apple, Procesador.Desconocido),
         };
 
-        internal static List<Videojuegos> Videojuegos { get; set; } = new List<Videojuegos>
+        public static List<Videojuegos> Videojuegos { get; set; } = new List<Videojuegos>
         {
             new Videojuegos(399, 6, "PS5 Digital", Marca.Sony, true),
             new Videojuegos(350, 6, "Xbox Series S", Marca.Ninendo, true),

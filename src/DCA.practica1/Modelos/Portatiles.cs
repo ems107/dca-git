@@ -1,4 +1,5 @@
 ﻿using DCA.practica1.Modelos.Enumerados;
+using DCA.practica1.Modelos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DCA.practica1.Modelos
 {
-    class Portatiles
+    public class Portatiles : Producto
     {
         public Single Precio { get; set; }
         public Single Pulgadas { get; set; }
@@ -22,6 +23,10 @@ namespace DCA.practica1.Modelos
             Nombre = nombre;
             Marca = marca;
             Procesador = procesador;
+        }
+        public override string ToString()
+        {
+            return Marca + " - " + Nombre;
         }
     }
 }

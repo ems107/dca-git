@@ -28,13 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.botonVideojuegos = new System.Windows.Forms.Button();
+            this.botonPortatiles = new System.Windows.Forms.Button();
+            this.botonDispositivosMoviles = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // botonVideojuegos
+            // 
+            this.botonVideojuegos.Location = new System.Drawing.Point(134, 92);
+            this.botonVideojuegos.Name = "botonVideojuegos";
+            this.botonVideojuegos.Size = new System.Drawing.Size(75, 23);
+            this.botonVideojuegos.TabIndex = 0;
+            this.botonVideojuegos.Text = "Videojuegos";
+            this.botonVideojuegos.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.botonVideojuegos.UseVisualStyleBackColor = true;
+            this.botonVideojuegos.Click += new System.EventHandler(this.botonVideojuegos_Click);
+            // 
+            // botonPortatiles
+            // 
+            this.botonPortatiles.Location = new System.Drawing.Point(351, 92);
+            this.botonPortatiles.Name = "botonPortatiles";
+            this.botonPortatiles.Size = new System.Drawing.Size(75, 23);
+            this.botonPortatiles.TabIndex = 1;
+            this.botonPortatiles.Text = "Portatiles";
+            this.botonPortatiles.UseVisualStyleBackColor = true;
+            this.botonPortatiles.Click += new System.EventHandler(this.botonPortatiles_Click);
+            // 
+            // botonDispositivosMoviles
+            // 
+            this.botonDispositivosMoviles.Location = new System.Drawing.Point(548, 92);
+            this.botonDispositivosMoviles.Name = "botonDispositivosMoviles";
+            this.botonDispositivosMoviles.Size = new System.Drawing.Size(116, 23);
+            this.botonDispositivosMoviles.TabIndex = 2;
+            this.botonDispositivosMoviles.Text = "Dispositivos Moviles";
+            this.botonDispositivosMoviles.UseVisualStyleBackColor = true;
+            this.botonDispositivosMoviles.Click += new System.EventHandler(this.botonDispositivosMoviles_Click);
+            // 
+            // VentanaTienda
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonDispositivosMoviles);
+            this.Controls.Add(this.botonPortatiles);
+            this.Controls.Add(this.botonVideojuegos);
+            this.Name = "VentanaTienda";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button botonVideojuegos;
+        private System.Windows.Forms.Button botonPortatiles;
+        private System.Windows.Forms.Button botonDispositivosMoviles;
     }
 }
 
